@@ -1,3 +1,203 @@
-<html>
-  <body>Hola, Hello !!!!</body>
+<!DOCTYPE html>
+<html lang="cat">
+<head>
+<meta charset="UTF-8">
+<title>Magatzem- Esplai Pubilla</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div class="titulo"><a href="index.html"><img src="img/logo.webp"></a></div>
+    <div class="header-right">
+      <div class="menu-superior">
+        <a href="index.html">Inici</a>
+        <a href="calen.html">Calendari</a>
+        <a href="agend.html">Agenda</a>
+        <a href="incid.html">Incidències</a>
+      </div>
+      <div class="buscador">
+        <input type="text" id="searchInput" placeholder="Buscar...">
+        <button id="searchBtn">Buscar</button>
+        <button id="clearSearch" title="Netejar">✖</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="contenido">
+
+  <aside class="sidebar">
+
+    <div class="sidebar-header">
+      <h1>MENÚ PRINCIPAL</h1>
+      <div class="accent-line"></div>
+    </div>
+
+    <div class="menu-container">
+
+      <!-- ESPLAI -->
+      <div class="menu-section">
+        <div class="menu-header">
+          <svg class="icono" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          <span>L'Esplai</span>
+        </div>
+        <div class="submenu">
+          <a href="conei.html">Coneix-nos</a>
+          <a href="dades.html">Dades Generals</a>
+          <a href="distr.html">Distribució d'Espais</a>
+          <a href="estat.html">Estatuts</a>
+          <a href="histo.html">Història</a>
+          <a href="metod.html">Metodologia</a>
+          <a href="missi.html">Missió i Valors</a>
+          <a href="norme.html">Normes de Convivència</a>
+          <a href="organ.html">Organigrama</a>
+          <a href="plade.html">Plà d'Emergència</a>
+          <a href="plano.html">Plànols de l'Entitat</a>
+          <a href="prote.html">Protecció de Dades</a>
+        </div>
+      </div>
+
+      <!-- MATERIAL -->
+      <div class="menu-section">
+        <div class="menu-header">
+          <svg class="icono" viewBox="0 0 24 24"><path d="M21 16V8c0-.88-.39-1.68-1-2.22L13 2.5c-.62-.33-1.38-.33-2 0L4 5.78C3.39 6.32 3 7.12 3 8v8c0 .88.39 1.68 1 2.22l7 3.28c.62.33 1.38.33 2 0l7-3.28c.61-.54 1-1.34 1-2.22z"/></svg>
+          <span>Material</span>
+        </div>
+        <div class="submenu">
+          <a href="activ.html">Activitats</a>
+          <a href="carpe.html">Carpes</a>
+          <a href="coman.html">Comandes</a>
+          <a href="elmag.html">El Magatzem</a>
+          <a href="elsma.html">Els Materials</a>
+          <a href="equip.html">Equip de So</a>
+          <a href="estiu.html">Estiu</a>
+          <a href="estoc.html">Estoc a les Sales</a>
+          <a href="focus.html">Focus Led</a>
+          <a href="gener.html">Generador</a>
+          <a href="prest.html">Préstec Campaments</a>
+          <a href="prove.html">Proveïdors</a>
+          <a href="tende.html">Tendes d'Acampada</a>
+	  <a href="xapes.html">Xapes</a>
+        </div>
+      </div>
+
+      <!-- MANTENIMENT -->
+      <div class="menu-section">
+        <div class="menu-header">
+          <svg class="icono" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <span>Manteniment</span>
+        </div>
+        <div class="submenu">
+          <a href="ascen.html">Ascensor</a>
+          <a href="comun.html">Comunicacions</a>
+          <a href="extin.html">Extintors</a>
+          <a href="fluix.html">Fluix de Comunicacions</a>
+          <a href="infor.html">Informe Edifici</a>
+          <a href="infra.html">Infraestructures</a>
+          <a href="proto.html">Protocol</a>
+          <a href="tecni.html">Tècnics i Lots</a>
+          <a href="urgen.html">Urgències</a>
+        </div>
+      </div>
+
+      <!-- LABORAL -->
+      <div class="menu-section">
+        <div class="menu-header">
+          <svg class="icono" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <span>Laboral</span>
+        </div>
+        <div class="submenu">
+          <a href="comui.html">Comunicació Interna</a>
+          <a href="conve.html">Conveni de Lleure</a>
+          <a href="jorna.html">Jornada Laboral</a>
+          <a href="porta.html">Portal del treballador</a>
+        </div>
+      </div>
+
+      <!-- ALTRES -->
+      <div class="menu-section">
+        <div class="menu-header">
+          <svg class="icono" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          <span>Altres</span>
+        </div>
+        <div class="submenu">
+          <a href="esdev.html">Esdeveniments</a>
+          <a href="docum.html">Fitxers</a>
+          <a href="tutor.html">Tutorials</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="modern-footer">
+      <div class="footer-line"></div>
+      <strong>Club d'<span class="vermell">Esplai</span> Pubilla Cases</strong>
+      <p>Ús exclusiu membres de l'entitat.</p>
+    </div>
+
+  </aside>
+
+
+
+<main class="principal intranet-scope">
+
+  <!-- HERO / BENVINGUDA -->
+  <section class="hero">
+    <h2>Intranet de Material i Manteniment</h2>
+    <p>Plataforma per facilitar la comunicació i la gestió del magatzem de l'Esplai.</p>
+  </section>
+
+ 
+
+
+  <!-- ACCESSOS RÀPIDS -->
+  <section class="accessos">
+    <h2>Accessos ràpids</h2>
+    <div class="quick-links">
+      <a href="doc1.html">📄 Documents</a>
+      <a href="incid.html">🛠️ Incidències</a>
+      <a href="urgen.html">🚨 Urgències</a>
+      <a href="doc2.html">📊 Informes</a>
+    </div>
+  </section>
+
+  <!-- GRUPS -->
+  <section class="grups">
+    <h2>Grups</h2>
+
+    <div class="cards">
+      <div class="card">
+        <img src="img/orio.png">
+        <h3>ORIÓ</h3>
+        <p>Eca, Tabit, Altnitac i Kuma</p>
+      </div>
+
+      <div class="card">
+        <img src="img/boreal.png" alt="">
+        <h3>BOREAL</h3>
+        <p>Nusa-khan i Shylika</p>
+      </div>
+
+      <div class="card">
+        <img src="img/casal.png" alt="">
+        <h3>CASAL</h3>
+        <p>Elfos i joves</p>
+      </div>
+
+      <div class="card">
+        <img src="img/indi.png" alt="">
+        <h3>INDI</h3>
+        <p>Diversitat funcional</p>
+      </div>
+    </div>
+  </section>
+
+</main>  
+</div>
+<script src="js/main.js"></script>
+<script src="js/cercador.js"></script>
+</body>
 </html>
