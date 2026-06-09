@@ -1,2 +1,181 @@
-# MagatzemPubilla.github.io
-Magatzem Esplai Pubilla
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accés al Magatzem</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        linear-gradient(135deg,#0f172a,#1e293b,#334155);
+    overflow:hidden;
+}
+
+body::before{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#38bdf8;
+    filter:blur(180px);
+    opacity:.3;
+    top:-150px;
+    left:-150px;
+}
+
+body::after{
+    content:'';
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#8b5cf6;
+    filter:blur(180px);
+    opacity:.3;
+    bottom:-100px;
+    right:-100px;
+}
+
+.login-card{
+    position:relative;
+    z-index:1;
+    width:380px;
+    padding:40px;
+    border-radius:24px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+    text-align:center;
+    color:white;
+}
+
+.logo{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+h1{
+    margin-bottom:8px;
+    font-size:28px;
+}
+
+.subtitle{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.input-group{
+    position:relative;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:14px;
+    background:rgba(255,255,255,0.12);
+    color:white;
+    font-size:16px;
+}
+
+input::placeholder{
+    color:#cbd5e1;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    background:linear-gradient(135deg,#38bdf8,#8b5cf6);
+    color:white;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(139,92,246,.4);
+}
+
+.error{
+    margin-top:15px;
+    color:#f87171;
+    display:none;
+}
+
+.footer{
+    margin-top:20px;
+    color:#94a3b8;
+    font-size:13px;
+}
+</style>
+</head>
+<body>
+
+<div class="login-card">
+    <div class="logo">🔐</div>
+
+    <h1>Accés Privat</h1>
+    <p class="subtitle">Introdueix la contrasenya per entrar al magatzem</p>
+
+    <div class="input-group">
+        <input
+            type="password"
+            id="password"
+            placeholder="Contrasenya"
+            autocomplete="off">
+    </div>
+
+    <button onclick="login()">Entrar</button>
+
+    <div id="error" class="error">
+        Contrasenya incorrecta
+    </div>
+
+    <div class="footer">
+        Sistema de gestió de magatzem
+    </div>
+</div>
+
+<script>
+const PASSWORD = "1234";
+
+function login() {
+    const pass = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
+    if(pass === PASSWORD){
+        window.location.href = "magatzem.html";
+    } else {
+        error.style.display = "block";
+    }
+}
+
+document.getElementById("password").addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        login();
+    }
+});
+
+</script>
+
+
+</body>
+</html>
