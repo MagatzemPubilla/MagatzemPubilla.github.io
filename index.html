@@ -155,25 +155,24 @@ button:hover{
 </div>
 
 <script>
-const PASSWORD = "pubilla";
+const PASSWORD = atob("cHViaWxsYQ==");
 
 function login() {
     const pass = document.getElementById("password").value;
     const error = document.getElementById("error");
 
-    if(pass === PASSWORD){
+    if (pass === PASSWORD) {
         window.location.href = "magatzem.html";
     } else {
         error.style.display = "block";
     }
 }
 
-document.getElementById("password").addEventListener("keypress", function(e){
-    if(e.key === "Enter"){
+document.getElementById("password").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
         login();
     }
 });
-
 </script>
 
 
