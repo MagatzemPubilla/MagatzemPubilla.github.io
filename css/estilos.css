@@ -1,0 +1,268 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  background: #f5f5f5;
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 26px;
+  font-size-adjust: none;
+  color: green;
+  font-style: normal;
+  font-weight: bold;
+  font-stretch: expanded;
+}
+
+
+/* CAPÇALERA */
+
+.header-top {
+  background: #1b5e20;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.menu-superior a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.menu-superior a:hover { text-decoration: underline; }
+
+/* BUSCADOR */
+
+
+.resaltado {
+  background-color: yellow;
+  font-weight: bold;
+  padding: 2px;
+}
+
+.buscador {
+  display: flex;
+  margin-left: 20px;
+}
+
+.buscador input { padding: 5px; font-size: 13px; }
+.buscador button {
+  padding: 5px 10px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* LAYOUT */
+.contenido { display: flex; padding: 20px; }
+
+/* MENÚ LATERAL */
+
+.menu-lateral {
+  width: 220px;
+  background: #f0f0f0;
+  padding: 15px;
+  border-right: 1px solid #ccc;
+  position: relative;      /* per al z-index */
+  z-index: 10;
+}
+
+.menu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > li {
+  margin-bottom: 5px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.menu a:hover {
+  background: #dcedc8;
+}
+
+
+.toggle {
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle::after {
+  float: right;
+  transition: transform 0.3s;
+}
+
+.toggle.activo::after {
+  transform: rotate(-180deg);
+}
+
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 15px;
+  background: #f0f0f0;
+}
+
+.submenu.activo {
+  max-height: 500px; 
+}
+
+.menu a.activo {
+  background: #a5d6a7;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* CONTENIDO CENTRAL */
+.principal { flex: 1; padding-left: 25px; }
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;                 /* Mateix ample */
+  min-height: 50px;       /* Mateixa alçada mínima */
+  padding: 10px;
+  border-radius: 12px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: transform 0.2s ease; 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.green { background: #2e9f4b; }
+.blue { background: #2196f3; }
+.red { background: #f44336; }
+.yellow { background: #fbc02b; color: #333; }
+
+ .centrada {
+    display: block;
+    margin: 0 auto;
+  }
+
+.contingut {
+    max-width: 1000px;
+    width: 100%;
+    margin: 1px auto;
+    display: flex;
+}
+
+.mostrador{
+    width: 100%;
+    transition: .5s ease;
+}
+
+.mostrador .fila{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mostrador .fila .item{
+    max-width: 200px;
+    padding: 10px;
+    height: 200px;
+    /*border: 2px solid red;*/
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.mostrador .fila .item img{
+    width: 100%;
+    margin: 30px 0;
+}
+
+.seleccion{
+    transition: .5s ease;
+    opacity: 0;
+    width: 0%;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cerrar{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+.tabla-contenedor {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.tabla-contactos {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+.tabla-contactos tbody tr:nth-child(even) {
+  background-color: #D0F0C0;
+}
+
+/* PIE */
+#topBtn{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#166534;
+color:white;
+border:none;
+padding:14px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+}
+
+
+footer {
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.llibre {
+  width: 80%;
+  margin: 0px;
+}
